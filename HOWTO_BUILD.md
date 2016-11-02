@@ -19,6 +19,7 @@ puppet apply --modulepath /home/vagrant/.puppetlabs/etc/code/modules /vagrant/te
 - Make modifications to _metadata.json_
 - Make modifications to README.md.
 - Make modifications to CHANGELOG.md.
+- Make modifications to CONTRIBUTORS.md.
 - Commit, push, wait for tests available https://travis-ci.org/schrepfler/puppet-jdk_oracle
 - Enter VM and build tgz.
 

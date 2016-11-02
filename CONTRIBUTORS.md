@@ -9,3 +9,5 @@ schrepfler/jdk_oracle puppet module
 * **[Ron Aughenbaugh](https://github.com/mojibake-umd)** @mojibake-umd
 
 * **[Unknown hero](https://github.com/030)** @030
+
+* **[Seth Cleveland](https://github.com/sethcleveland)** @sethcleveland
