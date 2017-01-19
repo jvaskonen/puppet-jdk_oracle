@@ -64,7 +64,7 @@ class jdk_oracle (
   }
 
   $java_home = "${install_dir}/jdk1.${version}.0_${java_update}"
-  $java_download_uri = "http://download.oracle.com/otn-pub/java/jdk/${version}u${java_update}-b${java_build}/jdk-${version}u${java_update}-linux-${arch}.rpm"
+  $java_download_uri = "http://download.oracle.com/otn-pub/java/jdk/${version}u${java_update}-b${java_build}/e9e7ea248e2c4826b92b3f075a80e441/jdk-${version}u${java_update}-linux-${arch}.rpm"
   $jce_download_uri = 'http://download.oracle.com/otn-pub/java/jce/8/jce_policy-8.zip'
   $installer_filename = inline_template('<%= File.basename(@java_download_uri) %>')
   $wget_header = 'wget -c --no-cookies --no-check-certificate --header'

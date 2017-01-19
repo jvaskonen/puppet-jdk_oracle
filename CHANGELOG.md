@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [1.0.7] - 2017-01-20
 ### Changed
+- BREAKING I've noticed this time the download url has changed, tried to hardcode the given path to this version, not sure if it will expire in the future.
 - Updating default JDK8 to update 121
 
 ## [1.0.6] - 2016-10-26
