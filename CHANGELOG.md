@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.0.7] - 2017-01-20
+### Changed
+- Updating default JDK8 to update 121
+
 ## [1.0.6] - 2016-10-26
 ### Enhancement
 - If download of rpm fails, assure the resource is deleted so that puppet can retry.
