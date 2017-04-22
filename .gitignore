@@ -6,3 +6,4 @@ pkg/
 .vendor
 .idea/
 *.iml
+stdlib/

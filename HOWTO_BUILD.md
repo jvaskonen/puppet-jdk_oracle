@@ -1,11 +1,14 @@
 Requirement
 ========
+- Clone puppetlabs-stdlib
+```sh
+git clone https://github.com/puppetlabs/puppetlabs-stdlib.git stdlib
+```
 - Installation of build environment (bootstrapped by Vagrantfile.)
 
 ```shell
 vagrant up
 vagrant ssh
-sudo git clone https://github.com/puppetlabs/puppetlabs-stdlib.git /stdlib
 rm -rf /vagrant/pkg
 cd /vagrant
 puppet module build .

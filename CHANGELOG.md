@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.0.8] - 2017-04-24
+### Changed
+- Updating default JDK8 to update 131
+
 ## [1.0.7] - 2017-01-20
 ### Changed
 - BREAKING I've noticed this time the download url has changed, tried to hardcode the given path to this version, not sure if it will expire in the future.
