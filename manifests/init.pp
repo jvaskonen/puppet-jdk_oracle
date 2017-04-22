@@ -93,8 +93,8 @@ class jdk_oracle (
       cwd     => $tmp_dir,
       command => "rm -f ${installer_filename}",
       unless  => "test -s ${installer_filename}",
-    } ->
-    exec { 'get_jdk_installer':
+    }
+    -> exec { 'get_jdk_installer':
       cwd     => $tmp_dir,
       creates => "${tmp_dir}/${installer_filename}",
       command => "${wget_header} ${cookie} \"${java_download_uri}\" -O ${installer_filename}",
@@ -208,8 +208,8 @@ class jdk_oracle (
       file { "${tmp_dir}/${jce_filename}":
         source  => "${cache_source}${jce_filename}",
         require => File[$install_dir],
-      } ->
-      exec { 'get_jce_package':
+      }
+      -> exec { 'get_jce_package':
         cwd     => $install_dir,
         creates => "${install_dir}/jce_from_cache",
         command => 'touch jce_from_cache',
