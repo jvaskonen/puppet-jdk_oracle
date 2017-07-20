@@ -13,7 +13,8 @@
 #   Defaults to <tt>/opt</tt>.
 #
 # [* use_cache *]
-#   Boolean.  Optionally host the installer file locally instead of fetching it each time (for faster dev & test)
+#   Boolean.  Optionally host the installer file locally instead of fetching it
+#   each time (for faster dev & test)
 #   The puppet cache flag is for faster local vagrant development, to
 #   locally host the tarball from oracle instead of fetching it each time.
 #   Defaults to <tt>false</tt>.
@@ -23,11 +24,12 @@
 #   Defaults to <tt>x64</tt>.
 #
 # [* jce *]
-#   Boolean.  Optionally install Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files
+#   Boolean.  Optionally install Java Cryptography Extension (JCE) Unlimited
+#   Strength Jurisdiction Policy Files
 #   Defaults to <tt>false</tt>.
 #
 # [* default_java *]
-#   Boolean.  If the installed java version is linked as the default java, javac etc...
+#   Boolean.  If the installed java version is linked as the default.
 #   Defaults to <tt>true</tt>.
 #
 # [* ensure *]
@@ -55,8 +57,8 @@ class jdk_oracle (
       $java_build = hiera('jdk_oracle::version::7::build', 15)
     }
     8       : {
-      $java_update = hiera('jdk_oracle::version::8::update', 131)
-      $java_build = hiera('jdk_oracle::version::8::build', 11)
+      $java_update = hiera('jdk_oracle::version::8::update', 141)
+      $java_build = hiera('jdk_oracle::version::8::build', 15)
     }
     default : {
       fail("Unsupported version: ${version}. Supported versions are 7 and 8")
@@ -64,7 +66,7 @@ class jdk_oracle (
   }
 
   $java_home = "${install_dir}/jdk1.${version}.0_${java_update}"
-  $java_download_uri = "http://download.oracle.com/otn-pub/java/jdk/${version}u${java_update}-b${java_build}/d54c1d3a095b4ff2b6607d096fa80163/jdk-${version}u${java_update}-linux-${arch}.rpm"
+  $java_download_uri = "http://download.oracle.com/otn-pub/java/jdk/${version}u${java_update}-b${java_build}/336fa29ff2bb4ef291e347e091f7f4a7/jdk-${version}u${java_update}-linux-${arch}.rpm"
   $jce_download_uri = 'http://download.oracle.com/otn-pub/java/jce/8/jce_policy-8.zip'
   $installer_filename = inline_template('<%= File.basename(@java_download_uri) %>')
   $wget_header = 'wget -c --no-cookies --no-check-certificate --header'

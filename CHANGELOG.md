@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.0.9] - 2017-07-21
+### Changed
+- Updating default JDK8 to update 141
+
 ## [1.0.8] - 2017-04-24
 ### Changed
 - Updating default JDK8 to update 131
