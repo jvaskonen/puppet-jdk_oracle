@@ -45,7 +45,7 @@ class jdk_oracle (
   $cache_source = 'puppet:///modules/jdk_oracle/',
   $jce          = hiera('jdk_oracle::jce', false),
   $default_java = hiera('jdk_oracle::default_java', true)) {
-  validate_integer($version)
+  validate_legacy(Integer, 'validate_integer', $version)
 
   # Set default exec path for this module
   Exec {
