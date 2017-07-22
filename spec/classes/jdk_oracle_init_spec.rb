@@ -17,7 +17,7 @@ describe 'jdk_oracle', :type => 'class' do
                 should contain_exec('install_rpm').with_creates('/usr/java/jdk1.8.0_141')
                 should contain_file('/etc/alternatives/java').with({
                     :ensure  => 'link',
-                    :target  => '/usr/java/jdk1.8.0_131/bin/java',
+                    :target  => '/usr/java/jdk1.8.0_141/bin/java',
                 })
             }
         end
