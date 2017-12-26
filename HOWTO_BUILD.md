@@ -1,6 +1,7 @@
 Provision Build environment
 ========
 
+I've used more/less the approach in [this article](https://oglok.github.io/2017-01-27-Test-puppet-spec-in-a-docker/) to setup a Docker environment.
 ```shell
 docker build -t centos_puppet .
 ```
@@ -30,6 +31,7 @@ java -version
 - Make modifications to CHANGELOG.md.
 - Make modifications to CONTRIBUTORS.md.
 - Commit, push, wait for tests available https://travis-ci.org/schrepfler/puppet-jdk_oracle
+- Tag
 
 Upload module to pupetforge
 ======
