@@ -16,7 +16,7 @@ This approach was inspired by: http://stackoverflow.com/questions/10268583/how-t
 
 Default Version
 -----
-* JDK8 8u141
+* JDK8 8u151
 * JDK7 7u80
 
 Features
