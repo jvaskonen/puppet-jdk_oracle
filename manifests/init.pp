@@ -55,10 +55,12 @@ class jdk_oracle (
     7       : {
       $java_update = hiera('jdk_oracle::version::7::update', 80)
       $java_build = hiera('jdk_oracle::version::7::build', 15)
+      $java_download_token = hiera('jdk_oracle::version::7::download_token','e758a0de34e24606bca991d704f6dcbf')
     }
     8       : {
       $java_update = hiera('jdk_oracle::version::8::update', 151)
       $java_build = hiera('jdk_oracle::version::8::build', 12)
+      $java_download_token = hiera('jdk_oracle::version::8::download_token','e758a0de34e24606bca991d704f6dcbf')
     }
     default : {
       fail("Unsupported version: ${version}. Supported versions are 7 and 8")
@@ -66,7 +68,7 @@ class jdk_oracle (
   }
 
   $java_home = "${install_dir}/jdk1.${version}.0_${java_update}"
-  $java_download_uri = "http://download.oracle.com/otn-pub/java/jdk/${version}u${java_update}-b${java_build}/e758a0de34e24606bca991d704f6dcbf/jdk-${version}u${java_update}-linux-${arch}.rpm"
+  $java_download_uri = "http://download.oracle.com/otn-pub/java/jdk/${version}u${java_update}-b${java_build}/${java_download_token}/jdk-${version}u${java_update}-linux-${arch}.rpm"
   $jce_download_uri = 'http://download.oracle.com/otn-pub/java/jce/8/jce_policy-8.zip'
   $installer_filename = inline_template('<%= File.basename(@java_download_uri) %>')
   $wget_header = 'wget -c --no-cookies --no-check-certificate --header'
